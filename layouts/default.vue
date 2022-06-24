@@ -14,7 +14,7 @@
     <div class="mainContainer">
         <nuxt />
     </div>
-    <div class="shape">
+    <!-- <div class="shape">
       <svg version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 500 500"
@@ -37,7 +37,7 @@
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </div> -->
     <footer class="footer">
       <div class="footerLeft">
         <nav>
@@ -70,72 +70,76 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .pageContainer {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(256, 256, 256, 0.2);
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(256, 256, 256, 0.2);
+  position: relative;
 }
 
 .shape {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: scale(0.25);
-    margin-top: -100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: scale(0.25);
+  margin-top: -100px;
 }
 
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100vw - 40px);
-    margin: 20px;
-    border-bottom: 1px solid #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 40px);
+  margin: 20px;
+  border-bottom: 1px solid #aaa;
 }
 
 .mainContainer {
-    height: calc(100vh - 106px);
-    padding-top: 60px;
-    margin: 0 20px;
+  height: calc(100vh - 106px);
+  padding-top: 60px;
+  margin: 0 20px;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 40px);
+  margin: 20px;
+  border-top: 1px solid #aaa;
+}
+
+.footerLeft {
+  &__ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100vw - 40px);
-    margin: 20px;
-    border-top: 1px solid #aaa;
-}
+  }
 
-.footerLeft__ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerLeft__li {
+  &__li {
     padding: 10px;
+  }
 }
 
-.footerCenter__title {
+.footerCenter {
+  &__title {
     display: inline-block;
-}
+  }
 
-.footerCenter__mail {
+  &__mail {
     display: inline-block;
     text-decoration: underline;
     vertical-align: bottom;
+  }
 }
 </style>
