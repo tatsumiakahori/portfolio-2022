@@ -18,8 +18,10 @@ export default {
             { name: 'format-detection', content: 'telephone=no' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-        ]
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            // Montserrat（Italic）
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' }
+        ],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
@@ -36,14 +38,32 @@ export default {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         // https://go.nuxtjs.dev/eslint
-        '@nuxtjs/eslint-module'
+        '@nuxtjs/eslint-module', ['@nuxtjs/fontawesome', { component: 'fontAwesome', suffix: true }],
     ],
+
+    fontawesome: {
+        icons: {
+            solid: [
+                'faEnvelope',
+                'faCaretUp'
+            ]
+        }
+    },
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        'nuxt-webfontloader'
     ],
+
+    webfontloader: {
+        google: {
+            families: [
+                'Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' // Montserrat
+            ]
+        }
+    },
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {
@@ -61,5 +81,6 @@ export default {
                 }
             }
         },
+        transpile: ['curtainsjs'],
     }
 }
