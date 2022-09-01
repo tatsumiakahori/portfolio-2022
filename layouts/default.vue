@@ -31,7 +31,12 @@ export default {
 }
 
 .mainContainer {
-  padding: 100px 70px 0 90px;
+  padding: 100px 100px 0;
+  max-width: 1100px;
+  min-height: calc(100vh - 152px);
+  margin: 0 auto;
+  z-index: 9999;
+  display: flex;
 }
 
 .footer {

@@ -5,9 +5,9 @@ body {
     position: relative;
     font-size: 12px;
     font-weight: 200;
-    color: #ddd;
+    color: #333;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'M PLUS 1', 'Molle', sans-serif;
 }
 
 h1,

@@ -15,8 +15,8 @@
                         <font-awesome-icon icon="caret-up" class="headerNav__li--icon" v-show="this.$route.name === 'works'" />
                     </li>
                     <li class="headerNav__li">
-                        <nuxt-link class="headerNav__li--link" to="/me">2.me</nuxt-link>
-                        <font-awesome-icon icon="caret-up" class="headerNav__li--icon" v-show="this.$route.name === 'me'" />
+                        <nuxt-link class="headerNav__li--link" to="/about">2.about</nuxt-link>
+                        <font-awesome-icon icon="caret-up" class="headerNav__li--icon" v-show="this.$route.name === 'about'" />
                     </li>
                 </ul>
             </div>

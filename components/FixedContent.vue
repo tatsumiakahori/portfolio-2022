@@ -27,13 +27,15 @@ export default {
   width: 100vw;
   height: 100vh;
   text-align: center;
+  z-index: -999;
   &__pageTitle {
+    font-family: 'Montserrat';
     position: absolute;
     transform: rotate(90deg);
     font-size: 84px;
     font-style: italic;
     font-weight: 800;
-    -webkit-text-stroke: .5px #000;
+    @include text-stroke(#000);
     color: #fff;
     z-index: -9999;
     width: 280px;
