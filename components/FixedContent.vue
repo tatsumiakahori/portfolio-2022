@@ -35,7 +35,7 @@ export default {
     font-size: 84px;
     font-style: italic;
     font-weight: 800;
-    @include text-stroke(#000);
+    @include text-stroke(#888);
     color: #fff;
     z-index: -9999;
     width: 280px;
